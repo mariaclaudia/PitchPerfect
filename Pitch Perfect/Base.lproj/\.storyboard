@@ -25,6 +25,7 @@
                                 </state>
                                 <connections>
                                     <action selector="stopRecording:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dEp-ky-FZ5"/>
+                                    <segue destination="Wxe-qb-hME" kind="show" id="mLG-g6-f9r"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3w-D8-0Oa">
@@ -50,7 +51,7 @@
                         <color key="backgroundColor" red="0.25796740253624856" green="0.39566258528956416" blue="0.64289378156565657" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="qTW-74-Prm" secondAttribute="centerX" constant="-18.5" id="0Ym-NJ-UjZ"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="5qf-JI-IDF" secondAttribute="bottom" constant="79" id="2l7-Qj-a59"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="5qf-JI-IDF" secondAttribute="bottom" constant="81" id="2l7-Qj-a59"/>
                             <constraint firstAttribute="centerX" secondItem="5qf-JI-IDF" secondAttribute="centerX" id="5rQ-ti-wp3"/>
                             <constraint firstAttribute="centerX" secondItem="V3w-D8-0Oa" secondAttribute="centerX" id="8Ge-jc-wrZ"/>
                             <constraint firstAttribute="centerY" secondItem="V3w-D8-0Oa" secondAttribute="centerY" id="UML-YM-uke"/>
@@ -114,7 +115,7 @@
                             <constraint firstItem="Lei-w9-1nA" firstAttribute="top" secondItem="OaT-fg-Jfz" secondAttribute="bottom" constant="50" id="88a-KT-FYx"/>
                             <constraint firstItem="qe0-m0-3Jv" firstAttribute="top" secondItem="AsH-gP-ZCa" secondAttribute="bottom" constant="81" id="R8r-rI-qpk"/>
                             <constraint firstItem="mSb-cP-Eke" firstAttribute="top" secondItem="OaT-fg-Jfz" secondAttribute="bottom" constant="50" id="RPg-VF-b0y"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Lei-w9-1nA" secondAttribute="trailing" constant="51" id="duu-jR-r7S"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Lei-w9-1nA" secondAttribute="trailing" constant="30" id="duu-jR-r7S"/>
                             <constraint firstAttribute="centerX" secondItem="AsH-gP-ZCa" secondAttribute="centerX" id="wA8-Bi-eM2"/>
                             <constraint firstItem="mSb-cP-Eke" firstAttribute="leading" secondItem="hRj-7x-VPV" secondAttribute="leadingMargin" constant="30" id="yhV-fs-w2w"/>
                         </constraints>
