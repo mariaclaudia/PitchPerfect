@@ -9,10 +9,13 @@
 import UIKit
 
 class RecordSoundsViewController: UIViewController {
-    
-    @IBOutlet weak var recordingInProgress: UILabel!
-    @IBOutlet weak var stopButton: UIButton!
+  
+   
+  
     @IBOutlet weak var recordButton: UIButton!
+    
+    @IBOutlet weak var stopButton: UIButton!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,25 +26,28 @@ class RecordSoundsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     override func viewWillAppear(animated: Bool) {
         //Hiding the Stop Button
-        //recordButton.enabled = true;
+        recordButton.enabled = true;
         stopButton.hidden = true;
         
     }
     
     @IBAction func recordAudio(sender: UIButton) {
         stopButton.hidden = false;
-        recordingInProgress.hidden = false;
-        recordButton.enabled=false;
+        recordButton.enabled = false;
+       
         //TODO: Record the user voice
         
         println("Recording Audio");
     }
     
-    @IBAction func stopAudio(sender: UIButton) {
-        recordingInProgress.hidden=true;
-        //stopButton.hidden=true;
+    @IBAction func stopRecording(sender: UIButton) {
+       
+        stopButton.hidden=true;
+
     }
+   
 }
 
