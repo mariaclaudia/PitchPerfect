@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qf-JI-IDF">
-                                <rect key="frame" x="275" y="524" width="50" height="50"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qf-JI-IDF">
+                                <rect key="frame" x="275" y="458" width="50" height="50"/>
                                 <state key="normal" image="Stop">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -28,7 +28,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3w-D8-0Oa">
-                                <rect key="frame" x="250" y="250" width="100" height="100"/>
+                                <rect key="frame" x="250" y="180" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="V3w-D8-0Oa" secondAttribute="height" multiplier="10:3" id="bQr-GX-HwU"/>
                                 </constraints>
@@ -37,27 +37,32 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="recordAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="u2Q-bO-Ftz"/>
+                                    <action selector="recordAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="zQr-Fw-pNs"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uX-ym-ubU">
-                                <rect key="frame" x="279" y="383" width="79" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Recording..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTW-74-Prm">
+                                <rect key="frame" x="250" y="384" width="94" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.25796740253624856" green="0.39566258528956416" blue="0.64289378156565657" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="qTW-74-Prm" secondAttribute="centerX" constant="-18.5" id="0Ym-NJ-UjZ"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="5qf-JI-IDF" secondAttribute="bottom" constant="79" id="2l7-Qj-a59"/>
+                            <constraint firstAttribute="centerX" secondItem="5qf-JI-IDF" secondAttribute="centerX" id="5rQ-ti-wp3"/>
                             <constraint firstAttribute="centerX" secondItem="V3w-D8-0Oa" secondAttribute="centerX" id="8Ge-jc-wrZ"/>
                             <constraint firstAttribute="centerY" secondItem="V3w-D8-0Oa" secondAttribute="centerY" id="UML-YM-uke"/>
-                            <constraint firstAttribute="centerX" secondItem="7uX-ym-ubU" secondAttribute="centerX" constant="-18.5" id="bXP-tU-L78"/>
-                            <constraint firstItem="7uX-ym-ubU" firstAttribute="top" secondItem="V3w-D8-0Oa" secondAttribute="bottom" constant="33" id="hbA-GI-2lp"/>
+                            <constraint firstItem="qTW-74-Prm" firstAttribute="top" secondItem="V3w-D8-0Oa" secondAttribute="bottom" constant="36" id="ZQZ-8Y-hPF"/>
+                            <constraint firstAttribute="centerX" secondItem="qTW-74-Prm" secondAttribute="centerX" constant="-8" id="bhd-pH-bCn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Record" id="RJH-hs-gmE"/>
                     <connections>
-                        <outlet property="stopButton" destination="5qf-JI-IDF" id="raH-Y7-ZST"/>
+                        <outlet property="recordButton" destination="V3w-D8-0Oa" id="WCV-WK-DGj"/>
+                        <outlet property="recordingInProgress" destination="qTW-74-Prm" id="b0g-bX-Nm4"/>
+                        <outlet property="stopButton" destination="5qf-JI-IDF" id="f3e-gE-cwN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
