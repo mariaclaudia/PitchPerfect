@@ -49,7 +49,6 @@
                         </subviews>
                         <color key="backgroundColor" red="0.25796740253624856" green="0.39566258528956416" blue="0.64289378156565657" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="qTW-74-Prm" secondAttribute="centerX" constant="-18.5" id="0Ym-NJ-UjZ"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="5qf-JI-IDF" secondAttribute="bottom" constant="81" id="2l7-Qj-a59"/>
                             <constraint firstAttribute="centerX" secondItem="5qf-JI-IDF" secondAttribute="centerX" id="5rQ-ti-wp3"/>
                             <constraint firstAttribute="centerX" secondItem="V3w-D8-0Oa" secondAttribute="centerX" id="8Ge-jc-wrZ"/>
@@ -63,7 +62,7 @@
                         <outlet property="recordButton" destination="V3w-D8-0Oa" id="WCV-WK-DGj"/>
                         <outlet property="recordingInProgress" destination="qTW-74-Prm" id="b0g-bX-Nm4"/>
                         <outlet property="stopButton" destination="5qf-JI-IDF" id="f3e-gE-cwN"/>
-                        <segue destination="Wxe-qb-hME" kind="show" id="CBG-D1-daY"/>
+                        <segue destination="Wxe-qb-hME" kind="show" identifier="stopRecording" id="CBG-D1-daY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -109,22 +108,49 @@
                                     <action selector="stopPlaying:" destination="Wxe-qb-hME" eventType="touchUpInside" id="3qr-lk-hXn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sef-N1-b8z">
-                                <rect key="frame" x="94" y="361" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sef-N1-b8z">
+                                <rect key="frame" x="94" y="309" width="100" height="100"/>
                                 <state key="normal" image="chipmunk">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="playChipmunkAudio:" destination="Wxe-qb-hME" eventType="touchUpInside" id="Vef-fa-J4f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0N-Jf-R1V">
+                                <rect key="frame" x="275" y="105" width="100" height="100"/>
+                                <state key="normal" image="darthvader">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doE-jV-wCw">
+                                <rect key="frame" x="433" y="309" width="100" height="100"/>
+                                <state key="normal" image="darthvader">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playDarthvaderAudio:" destination="Wxe-qb-hME" eventType="touchUpInside" id="sO4-Ei-UhV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="doE-jV-wCw" firstAttribute="top" secondItem="Lei-w9-1nA" secondAttribute="bottom" constant="104" id="4WN-wF-UjA"/>
                             <constraint firstItem="Lei-w9-1nA" firstAttribute="top" secondItem="OaT-fg-Jfz" secondAttribute="bottom" constant="50" id="88a-KT-FYx"/>
+                            <constraint firstItem="Sef-N1-b8z" firstAttribute="top" secondItem="mSb-cP-Eke" secondAttribute="bottom" constant="104" id="8GT-UV-udD"/>
                             <constraint firstItem="qe0-m0-3Jv" firstAttribute="top" secondItem="AsH-gP-ZCa" secondAttribute="bottom" constant="81" id="R8r-rI-qpk"/>
                             <constraint firstItem="mSb-cP-Eke" firstAttribute="top" secondItem="OaT-fg-Jfz" secondAttribute="bottom" constant="50" id="RPg-VF-b0y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="doE-jV-wCw" secondAttribute="trailing" constant="30" id="cXd-1b-gBm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Lei-w9-1nA" secondAttribute="trailing" constant="30" id="duu-jR-r7S"/>
+                            <constraint firstItem="Sef-N1-b8z" firstAttribute="leading" secondItem="hRj-7x-VPV" secondAttribute="leadingMargin" constant="30" id="gjn-zd-gPO"/>
                             <constraint firstAttribute="centerX" secondItem="AsH-gP-ZCa" secondAttribute="centerX" id="wA8-Bi-eM2"/>
                             <constraint firstItem="mSb-cP-Eke" firstAttribute="leading" secondItem="hRj-7x-VPV" secondAttribute="leadingMargin" constant="30" id="yhV-fs-w2w"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="a0N-Jf-R1V"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pka-fM-Zvx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -156,5 +182,6 @@
         <image name="Slow" width="100" height="100"/>
         <image name="Stop" width="50" height="50"/>
         <image name="chipmunk" width="100" height="100"/>
+        <image name="darthvader" width="100" height="100"/>
     </resources>
 </document>
